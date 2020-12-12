@@ -3,7 +3,7 @@
 
 from random import randint
 
-user_input = input("Whar do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n")
+user_input = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n")
 if(user_input != "0" and user_input != "1" and user_input != "2"):
 	print("Please choose between 0,1 and 2")
 	exit()
