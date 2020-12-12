@@ -1,11 +1,12 @@
-#Password Generator
+# Password Generator
 
 from random import randint
 from random import choice
 from random import shuffle
 
-letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-symbols = ['@','#', '$', '%', '^', '&', '*', '(', ')']
+letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y",
+           "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+symbols = ['@', '#', '$', '%', '^', '&', '*', '(', ')']
 
 print('Welcome to the Password Generator')
 
@@ -50,25 +51,25 @@ def number():
 password = ''
 
 for i in range(num_letters):
-	let = choice(letters)
-	password += let
+    let = choice(letters)
+    password += let
 
 for i in range(num_symbols):
-	sym = choice(symbols)
-	password += sym
+    sym = choice(symbols)
+    password += sym
 
 for i in range(num_numbers):
-	num = str(randint(0,9))
-	password += num
+    num = str(randint(0, 9))
+    password += num
 
 password = list(password)
 
 for i in range(password_length):
-	swap_place = randint(0, password_length-1)
-	original = password[i]
-	swap_sym = password[swap_place]
-	password[swap_place] = original
-	password[i] = swap_sym
+    swap_place = randint(0, password_length-1)
+    original = password[i]
+    swap_sym = password[swap_place]
+    password[swap_place] = original
+    password[i] = swap_sym
 
 print(''.join(password))
 
